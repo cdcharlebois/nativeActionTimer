@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="mendix.nativeactiontimer.NativeActionTimer" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Native" 
+    xmlns="http://www.mendix.com/widget/1.0/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Native Action Timer</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="action" type="action" required="true">
+                <caption>Action</caption>
+                <description>the thing to do.</description>
+            </property>
+            <property key="interval" type="integer" required="true" defaultValue="0">
+                <caption>Interval (ms)</caption>
+                <description>Set to 0 to only run once</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
