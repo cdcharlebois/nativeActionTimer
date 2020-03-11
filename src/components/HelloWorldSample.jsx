@@ -12,7 +12,7 @@ const defaultStyle = {
 
 export class HelloWorldSample extends Component {
     styles = flattenStyles(defaultStyle, this.props.style);
-    executeAction = this.executeAction.bind(this);
+    executeActionHandler = this.executeAction.bind(this);
     _pendingAction = null;
 
     componentDidMount() { // doesn't seem to execute, likely because the component mounts when props are empty?
@@ -21,7 +21,7 @@ export class HelloWorldSample extends Component {
 
     componentDidUpdate() { // executes in an infinite loop
         if (this._pendingAction) {
-            this.executeAction();
+            this.executeActionHandler()
             this._pendingAction = false;
         }
     }
